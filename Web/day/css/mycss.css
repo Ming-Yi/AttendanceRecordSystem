@@ -1,0 +1,72 @@
+body {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 14px;
+	font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+}
+	
+#wrap {
+	width: 1100px;
+	margin: 0 auto;
+}
+#WorkDiv{
+	float: left;
+	width: 180px;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	background: #eee;
+	text-align: left;
+}
+	
+#external-events h4 {
+	font-size: 16px;
+	margin-top: 0;
+	padding-top: 1em;
+}
+	
+#external-events .fc-event {
+	margin: 10px 10px;
+	cursor: pointer;
+	text-align: center;
+}
+	
+#external-events p {
+	margin: 1.5em 0;
+	font-size: 11px;
+	color: #666;
+}
+	
+#external-events p input {
+	margin: 0;
+	vertical-align: middle;
+}
+
+#calendar {
+	float: right;
+	width: 900px;
+}
+
+.fc-content{
+	font-size:20px;
+	padding: 5px 5px;
+	text-align: center;
+}
+
+#WorkDiv input[type="text"],
+#WorkDiv input[type="password"],
+#WorkDiv input[type="button"]{
+	width: 150px;
+	margin: 5px 0 0 0;
+}
+
+
+#WorkDiv input[type=checkbox]{
+    margin: 3px 3px 3px 4px;
+}
+
+footer {
+	position: relative;
+	margin-top: -180px; 
+	height: 180px;
+	clear:both;
+}
