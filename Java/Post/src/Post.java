@@ -56,8 +56,10 @@ public class Post {
 	public void Updata(String date, String work) throws UnsupportedEncodingException, IOException {
 		URL url = new URL("http://psf.nchu.edu.tw/punch/PunchTbl_save");
 		HttpURLConnection http = (HttpURLConnection) url.openConnection();
-
+		
+		//設定Cookie
 		http.setRequestProperty("Cookie", "JSESSIONID=" + JSESSIONID);
+		//設定Request為POST
 		http.setRequestMethod("POST");
 		http.setDoOutput(true);
 

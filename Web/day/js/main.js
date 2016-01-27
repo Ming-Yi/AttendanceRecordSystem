@@ -1,9 +1,11 @@
 $(document).ready(function() {
 	var checkboxdata = [];
 
+	//Load LocalStorage Data
 	loadWork();
 	loadUser();
 
+	//submit click listener and ajax data
 	$("#submit").click(function() {
 		var user = $("#user").val();
 		var pwd = $("#pwd").val();
@@ -32,18 +34,22 @@ $(document).ready(function() {
 		str = str.substring(0,str.length-1);
 		strdata = "{\"user\":\""+user+"\",\"pwd\":\""+pwd+"\",\"schno\":\""+no+"\",\"day\":["+str+"]}";
 
-		$.post('php/update.php', {"data":strdata}, function(data) {
-			if(data=="ERROR"){
+		$.post('php/update.php', {"data":strdata}, function(datas) {
+			if(datas=="ERROR"){
 				alert("基本資料有誤");
 			}
 			else{
-				$('#calendar').fullCalendar( 'removeEvents');
-				alert("新增成功");
+				$('#calendar').fullCalendar('removeEvents');
+				alert("新增成功");					
 			}
-		},"json");
+		});
+
+
+		
 
 	});
 
+	//addwork click lister
 	$("#addwork").click(function() {
 		if($("#workname").val()=="")
 			return false;
@@ -56,6 +62,7 @@ $(document).ready(function() {
 		$("#workname").val("");
 	});
 
+	//delwork click lister
 	$("#delwork").click(function() {		
 		$('.modal-body').html("");
 		if(window.localStorage["work"] != undefined && window.localStorage["work"] != ""){
@@ -71,6 +78,7 @@ $(document).ready(function() {
 		}		
 	});
 
+	//delete work's localStorage data
 	$("#btn-del").click(function() {
 		$('input[type=checkbox][name=CheckBoxCities]').each(function() 
 		{
@@ -87,12 +95,10 @@ $(document).ready(function() {
 		$('#myModal').modal('hide');
 	});
 
-	/* initialize the external events
-	-----------------------------------------------------------------*/
+	// initialize Draggable
 	InitDraggable();
 	
-	/* initialize the calendar
-	-----------------------------------------------------------------*/
+	// initialize the calendar
 	$('#calendar').fullCalendar({
 	    columnFormat: {
 	        month: 'dddd',
@@ -123,6 +129,7 @@ $(document).ready(function() {
 	    }
 	});
 
+	//西元轉民國
 	function datefomat(date){
 		var datestr =  date.split("-");
 		var str="";
@@ -132,6 +139,7 @@ $(document).ready(function() {
 		return (str-19110000);
 	}
 
+	// initialize Draggable
 	function InitDraggable(){
 		$('#external-events .fc-event').each(function() {
 			$(this).data('event', {

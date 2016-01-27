@@ -12,10 +12,12 @@ public class main {
 
 	public static void main(String[] args) {
 		if (args[0] != (null)) {
+			//資料處理
 			main jsondata = new main();
 			jsondata.jsondata(args[0]);
 			try {
 				Post http = new Post(user, pwd, schno);
+				//判斷帳號密碼是否正確
 				if(http.login == true){
 					for (int i = 0; i < date.size(); i++) {
 						http.Updata(date.get(i), work.get(i));
