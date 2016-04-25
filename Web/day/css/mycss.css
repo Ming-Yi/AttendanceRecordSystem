@@ -3,6 +3,7 @@ body {
 	text-align: center;
 	font-size: 14px;
 	font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+	background-color: #FAF8F8 !important;
 }
 	
 #wrap {
@@ -14,7 +15,7 @@ body {
 	width: 180px;
 	padding: 5px 10px;
 	border: 1px solid #ccc;
-	background: #eee;
+	background: #FEFAEC;
 	text-align: left;
 }
 	
@@ -23,13 +24,29 @@ body {
 	margin-top: 0;
 	padding-top: 1em;
 }
-	
+.fc-event {
+	background-color: #2A6F7F !important;
+	color: #FFFFFF;
+	//border: 1px solid #CC2727 !important;
+}
+
+.fc-content{
+	font-size:20px;
+	padding: 5px 5px;
+	text-align: center;
+	background-color: #2A6F7F !important;
+}
+
+.fc-view {
+	background-color: #ECFFFB !important;
+}
+
 #external-events .fc-event {
 	margin: 10px 10px;
 	cursor: pointer;
 	text-align: center;
 }
-	
+
 #external-events p {
 	margin: 1.5em 0;
 	font-size: 11px;
@@ -46,11 +63,6 @@ body {
 	width: 900px;
 }
 
-.fc-content{
-	font-size:20px;
-	padding: 5px 5px;
-	text-align: center;
-}
 
 #WorkDiv input[type="text"],
 #WorkDiv input[type="password"],
