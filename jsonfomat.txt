@@ -1,0 +1,44 @@
+action : Login
+{
+	"user": "user",
+	"pwd": "pwd",
+}
+java -jar NCHU.jar Login {"user":"user","pwd":"pwd"}
+
+action : AddRecord
+{
+	"jsession":"JSESSIONID"
+	"schno": "schno",
+	"day": [{
+		"date": "1050406",
+		"work": "工作內容"
+	}, {
+		"date": "1050413",
+		"work": "工作內容"
+	}]
+}
+java -jar NCHU.jar AddRecord {"jsession":"JSESSIONID","schno":"計畫代碼","day":[{"date":"1050505","work":"整理資料"}]}
+
+action : DelRecord
+{
+	"jsession":"JSESSIONID",
+	"rid":["rid"]
+}
+java -jar NCHU.jar DelRecord {"jsession":"JSESSIONID","rid":["rid1","rid2","rid3"]}
+
+action : PrintRecord
+{
+	"jsession":"JSESSIONID"
+	"schno": "schno",
+	"dateBeg": "1050401",
+	"dateEnd": "1050430"
+}
+java -jar NCHU.jar PrintRecord {"jsession":"JSESSIONID","schno":"計畫代碼","dateBeg":"1050401","dateEnd":"1050430"}
+
+action : GetRecord
+{
+	"jsession":"JSESSIONID"
+	"user": "user",
+}
+java -jar NCHU.jar GetRecord {"jsession":"JSESSIONID","user":"user"}
+

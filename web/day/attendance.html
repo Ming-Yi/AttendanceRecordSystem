@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<title>出勤紀錄系統</title>
+<script src='js/moment.min.js'></script>
+<script src='js/jquery.min.js'></script>
+<script src='js/jquery-ui.custom.min.js'></script>
+<script src='js/fullcalendar.min.js'></script>
+<script src="js/bootstrap.min.js"></script>
+<script src='js/main.js'></script>
+<link href='css/fullcalendar.min.css' rel='stylesheet' />
+<link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/mycss.css">
+
+</head>
+<body>
+	<div id='wrap'>
+		<div id="WorkDiv">
+			<h4>工作內容 :</h4>
+			<div id='external-events'>
+				<div class='fc-event'>整理資料</div>
+				<div class='fc-event'>資料蒐集</div>
+				<div class='fc-event'>系統建置</div>
+				<span>
+					
+				</span>
+			</div>
+			<h4>新增工作內容 :</h4>
+			<div>
+				<input type="text" class="form-control" id="workname"/>
+				<input type="button" class="btn btn-default" id="addwork" value="新增">
+				<input type="button" class="btn btn-default" id="delwork" value="刪除">
+			</div>
+			<h4>計畫代碼 :</h4>
+			<div>
+				<select class="form-control schnos">
+				</select>
+				<input type="button" id="submit" class="btn btn-default" value="新增紀錄">
+				<input type="button" id="delsubmit" class="btn btn-default" value="刪除紀錄">
+<!-- 				<a href="http://psf.nchu.edu.tw/punch/index.jsp">中興大學-出勤記錄系統</a> -->
+			</div>
+			<h4>列印 :</h4>
+			<div>
+				開始日期 :
+				<input type="date" class="form-control printdate" id="dateBeg" />
+				結束日期 :
+				<input type="date" class="form-control printdate" id="dateEnd" />
+				<input type="button" id="printbtn" class="btn btn-default" value="列印">
+			</div>
+
+		</div>
+		<div id='calendar'></div>
+<!-- 		<footer><H2>請<font color="red">拖曳</font>工作內容至日曆，<font color="red">連點刪除</font>工作內容</H2></footer> -->
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id="myModalLabel">刪除工作內容</h4>
+		      </div>
+		      <div class="modal-body">
+
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary" id="btn-del">確定刪除</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+		<div class="modal fade" id="delrecord" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id="">刪除紀錄</h4>
+		      </div>
+		      <div class="modal-body">
+				<table class="table table-striped">
+					
+				</table>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary" id="btn-del-record">確定刪除</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</body>
+</html>

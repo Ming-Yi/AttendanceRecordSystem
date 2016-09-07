@@ -82,3 +82,16 @@ footer {
 	height: 180px;
 	clear:both;
 }
+
+.schnos,
+.printdate{
+	width: 150px;
+}
+
+#delrecord .modal-body{
+	text-align: left;
+}
+
+#delrecord .modal-body table{
+	margin: 0 auto;
+}
