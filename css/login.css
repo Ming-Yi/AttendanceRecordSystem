@@ -1,0 +1,117 @@
+body {
+    overflow-x: hidden;
+    background: #18bc9c;
+}
+
+
+.img-centered {
+    margin: 0 auto;
+}
+
+.show h1{
+    text-align: center;
+    color: #fff;
+    
+}
+
+.show .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.show img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.show .intro-text .name {
+    display: block;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.show .intro-text .skills {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+.container > H1{
+	margin: 0 auto 20px;
+}
+
+.fileinput{
+	width:50%;
+	margin:0 auto;
+}
+
+.btn-successmyself{
+    color: white;
+    font-size: 20px;
+    border: solid 2px white;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+}
+
+.btn-primarymyself{
+    color: white;
+    background-color: #4E90A4;
+    border-color: #4E90A4;
+}
+
+.floating-label-form-group {
+    border-bottom: 1px solid #eee;
+
+}
+
+.floating-label-form-group label {
+    display: block;
+    z-index: 0;
+    position: relative;
+    top: 2em;
+    margin: 0;
+    font-size: .85em;
+    line-height: 1.764705882em;
+    vertical-align: middle;
+    vertical-align: baseline;
+    opacity: 0;
+    -webkit-transition: top .3s ease,opacity .3s ease;
+    -moz-transition: top .3s ease,opacity .3s ease;
+    -ms-transition: top .3s ease,opacity .3s ease;
+    transition: top .3s ease,opacity .3s ease;
+}
+
+.floating-label-form-group input, .floating-label-form-group textarea {
+    z-index: 1;
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 1.5em;
+    background: 0 0;
+    box-shadow: none!important;
+    resize: none;
+}
+.form-group input{
+	/*color: #2c3e50;*/
+	/*color: white;*/
+}
+.form-group input::-webkit-input-placeholder{
+	color: white;
+}
+.floating-label-form-group-with-value label {
+    top: 0;
+    opacity: 1;
+}
+
+.floating-label-form-group-with-focus label {
+    color: white!important;
+    /*color: #2c3e50!important;*/
+}
+.form-group  label{
+	/*color: white;*/
+    font-size: 1.5em;
+	color: #2c3e50;
+}
